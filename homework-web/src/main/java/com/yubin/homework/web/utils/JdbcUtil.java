@@ -18,7 +18,7 @@ import java.util.Map;
 public class JdbcUtil {
     //创建一些静态成员变量，用来存储数据库的连接信息
     private static String driver = "com.mysql.jdbc.Driver";
-    private static String url = "jdbc:MySQL://localhost:3306/test";
+    private static String url = "jdbc:mysql://localhost:3306/test";
     private static String user = "root";
     private static String password = "123456";
 
