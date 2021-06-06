@@ -25,3 +25,8 @@ management:
     web:
       exposure: ## 暴露健康检测接口
         include: "health,info,dubbo-thread-pool"
+my:
+  stduent:
+    id: 1
+    name: zhangsan
+    enabled: true
