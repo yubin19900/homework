@@ -19,7 +19,16 @@ spring:
     encoding:
       force: true
       charset: UTF-8
-
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/sys
+    username: root
+    password: 123456
+    hikari:
+      connection-timeout: 30000
+      idle-timeout: 600000
+      maximum-pool-size: 200 #连接池的最大连接数
+      minimum-idle: 50 #最小空闲连接数
 management:
   endpoints:
     web:

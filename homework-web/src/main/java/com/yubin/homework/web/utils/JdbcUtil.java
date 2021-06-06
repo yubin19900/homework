@@ -1,5 +1,6 @@
 package com.yubin.homework.web.utils;
 
+import com.alibaba.fastjson.JSON;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import lombok.extern.slf4j.Slf4j;
@@ -18,7 +19,7 @@ import java.util.Map;
 public class JdbcUtil {
     //创建一些静态成员变量，用来存储数据库的连接信息
     private static String driver = "com.mysql.jdbc.Driver";
-    private static String url = "jdbc:mysql://localhost:3306/test";
+    private static String url = "jdbc:mysql://localhost:3306/sys";
     private static String user = "root";
     private static String password = "123456";
 
@@ -237,5 +238,10 @@ public class JdbcUtil {
             close(conn, pstat, null);
         }
         return row;
+    }
+
+    public static void main(String[] args) {
+        List<Map<String, Object>> list = selectList("select * from sys.sys_config");
+        System.out.println(JSON.toJSONString(list));
     }
 }
