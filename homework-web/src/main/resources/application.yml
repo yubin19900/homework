@@ -1,0 +1,31 @@
+server:
+  port: 8080
+  # tomcat设置
+  tomcat:
+    # 开启日志访问
+    max-threads: 1000
+    min-spare-threads: 500
+    uri-encoding: UTF-8
+    basedir: ./
+    accesslog:
+      enabled: true
+      pattern: "%h %I %{YYYY-MM-dd HH:mm:ss.SSS}t [%m %H %U] %s %b %Dms [%{req_param_data}r] [%{AppClientInfo}r] [%{zp-user-id}i] [%{User-Agent}i]"
+spring:
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+  http:
+    encoding:
+      force: true
+      charset: UTF-8
+
+management:
+  endpoints:
+    web:
+      exposure: ## 暴露健康检测接口
+        include: "health,info,dubbo-thread-pool"
+
+## 日志
+logging:
+  config: classpath:logback.xml
