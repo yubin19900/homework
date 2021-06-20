@@ -5,10 +5,12 @@
 3、批量插入方式，花452s
 4、事务批量插入方式，花357s
 批量插入和事务插入方式执行比较快，最慢的是单个插入
-代码地址:
+代码地址:https://github.com/yubin19900/homework/blob/main/homework-database/src/main/java/com/yubin/homework/utils/TestJdbcUtil.java
+
 作业第九题 读写分离 - 动态切换数据源版本 1.0
-代码地址:
-测试地址:
+代码地址:https://github.com/yubin19900/homework/tree/main/homework-database/src/main/java/com/yubin/homework/database
+测试地址:https://github.com/yubin19900/homework/blob/main/homework-database/src/test/java/com/yubin/homework/OrderInfoServiceImplTest.java
+
 作业第十题 读写分离 - 数据库框架版本 2.0
-代码地址:
-测试地址:
+代码地址:https://github.com/yubin19900/homework/blob/main/homework-database/src/main/java/com/yubin/homework/shardingsphere/ShardingsphereDynamicDataSource.java
+测试地址:https://github.com/yubin19900/homework/blob/main/homework-database/src/test/java/com/yubin/homework/ShardingsphereDynamicDataSourceTest.java
