@@ -12,6 +12,7 @@
         <module>homework-web</module>
         <module>homework-demo</module>
         <module>homework-test</module>
+        <module>homework-database</module>
     </modules>
     <dependencyManagement>
         <dependencies>
@@ -21,6 +22,11 @@
                 <version>2.1.18.RELEASE</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>2.0.0</version>
             </dependency>
             <dependency>
                 <groupId>org.projectlombok</groupId>
@@ -57,10 +63,15 @@
                 <artifactId>commons-lang3</artifactId>
                 <version>3.4</version>
             </dependency>
+<!--            <dependency>-->
+<!--                <groupId>mysql</groupId>-->
+<!--                <artifactId>mysql-connector-java</artifactId>-->
+<!--                <version>5.1.35</version>-->
+<!--            </dependency>-->
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
-                <version>5.1.35</version>
+                <version>8.0.14</version>
             </dependency>
             <dependency>
                 <groupId>joda-time</groupId>

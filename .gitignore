@@ -35,3 +35,6 @@ hs_err_pid*
 /homework-demo/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
 /homework-demo/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst
 /homework-demo/target/maven-archiver/pom.properties
+/homework-database/.gitignore
+/homework-database/mvnw
+/homework-database/mvnw.cmd

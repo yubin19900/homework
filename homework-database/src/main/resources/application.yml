@@ -1,0 +1,51 @@
+server:
+  port: 8089
+  # tomcat设置
+  tomcat:
+    # 开启日志访问
+    max-threads: 1000
+    min-spare-threads: 500
+    uri-encoding: UTF-8
+    basedir: ./
+    accesslog:
+      enabled: true
+      pattern: "%h %I %{YYYY-MM-dd HH:mm:ss.SSS}t [%m %H %U] %s %b %Dms [%{req_param_data}r] [%{AppClientInfo}r] [%{zp-user-id}i] [%{User-Agent}i]"
+spring:
+  http:
+    encoding:
+      force: true
+      charset: UTF-8
+  shardingsphere:
+    datasource:
+      names: write,read
+      write:
+        driverClassName: com.mysql.cj.jdbc.Driver
+        type: com.zaxxer.hikari.HikariDataSource
+        jdbcUrl: jdbc:mysql://localhost:3316/geek?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true
+        username: root
+        password: 123456
+      read:
+        driverClassName: com.mysql.cj.jdbc.Driver
+        type: com.zaxxer.hikari.HikariDataSource
+        jdbcUrl: jdbc:mysql://localhost:3326/geek?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true
+        username: root
+        password: 123456
+management:
+  endpoints:
+    web:
+      exposure: ## 暴露健康检测接口
+        include: "health,info,dubbo-thread-pool"
+datasource:
+   master:
+     url: jdbc:mysql://localhost:3316/geek?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true
+     userName: root
+     password: 123456
+     driverClassName: com.mysql.cj.jdbc.Driver
+   slave:
+     url: jdbc:mysql://localhost:3326/geek?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true
+     userName: root
+     password: 123456
+     driverClassName: com.mysql.cj.jdbc.Driver
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml

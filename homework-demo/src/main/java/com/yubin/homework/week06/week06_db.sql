@@ -70,6 +70,7 @@ CREATE TABLE `goods_info_ext` (
 drop table if exists `order_info`;
 CREATE TABLE `order_info` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `user_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户ID',
   `order_number` varchar(32) NOT NULL DEFAULT '' COMMENT '订单号',
   `order_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '下单时间',
   `deliver_time` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'  COMMENT '发货时间',

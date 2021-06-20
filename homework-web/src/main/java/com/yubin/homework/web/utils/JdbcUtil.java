@@ -19,7 +19,7 @@ import java.util.Map;
 public class JdbcUtil {
     //创建一些静态成员变量，用来存储数据库的连接信息
     private static String driver = "com.mysql.jdbc.Driver";
-    private static String url = "jdbc:mysql://localhost:3306/sys";
+    private static String url = "jdbc:mysql://localhost:3306/geek";
     private static String user = "root";
     private static String password = "123456";
 
@@ -161,7 +161,7 @@ public class JdbcUtil {
             row = stat.executeUpdate(updateSql);
 
         } catch (SQLException e) {
-            log.error("selectList SQLException error", e);
+            log.error("update SQLException error", e);
         } finally {
             close(conn, stat, null);
         }
