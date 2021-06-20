@@ -63,16 +63,16 @@
                 <artifactId>commons-lang3</artifactId>
                 <version>3.4</version>
             </dependency>
-<!--            <dependency>-->
-<!--                <groupId>mysql</groupId>-->
-<!--                <artifactId>mysql-connector-java</artifactId>-->
-<!--                <version>5.1.35</version>-->
-<!--            </dependency>-->
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
-                <version>8.0.14</version>
+                <version>5.1.35</version>
             </dependency>
+<!--            <dependency>-->
+<!--                <groupId>mysql</groupId>-->
+<!--                <artifactId>mysql-connector-java</artifactId>-->
+<!--                <version>8.0.14</version>-->
+<!--            </dependency>-->
             <dependency>
                 <groupId>joda-time</groupId>
                 <artifactId>joda-time</artifactId>
