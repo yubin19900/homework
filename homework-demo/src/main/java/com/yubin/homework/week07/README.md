@@ -4,7 +4,13 @@
 2、事务插入方式，花355s
 3、批量插入方式，花452s
 4、事务批量插入方式，花357s
-批量插入和事务插入方式执行比较快，最慢的是单个插入
+mysql 链接url中加入rewriteBatchedStatements=true设置
+1、普通插入方式，花543s
+2、事务插入方式，花158s
+3、批量插入方式，花23s
+4、事务批量插入方式，花23s
+
+批量插入和事务插入方式执行比较快，最慢的是单个插入,url中增加rewriteBatchedStatements=true，批量插入性能提高了10倍之多，实现了高性能批量插入
 代码地址:https://github.com/yubin19900/homework/blob/main/homework-database/src/main/java/com/yubin/homework/utils/TestJdbcUtil.java
 
 作业第九题 读写分离 - 动态切换数据源版本 1.0

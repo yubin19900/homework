@@ -14,10 +14,10 @@ import java.sql.*;
 @Slf4j
 public class TestJdbcUtil {
     //创建一些静态成员变量，用来存储数据库的连接信息
-    private static String driver = "com.mysql.jdbc.Driver";
+    private static String driver = "com.mysql.cj.jdbc.Driver";
     private static String url = "jdbc:mysql://localhost:3306/geek?rewriteBatchedStatements=true";
     private static String user = "root";
-    private static String password = "123456";
+    private static String password = "12345678";
 
     static {
         //1.注册驱动
@@ -116,8 +116,8 @@ public class TestJdbcUtil {
         PreparedStatement pstm = null;
         try {
             String sql = "INSERT INTO geek.order_info" +
-                    "(user_id, order_number, order_time, deliver_time, expect_distribution_time, receive_time, receive_name, receive_mobile, receive_address, order_status, deleted, add_time, add_user_id, update_user_id, update_time)" +
-                    "VALUES(?, ?, ?, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '', '', '', 0, 0, now(), ?, ?, now());";
+                    "(user_id, order_number, order_time, receive_name, receive_mobile, receive_address, order_status, deleted, add_time, add_user_id, update_user_id, update_time)" +
+                    "VALUES(?, ?, ?, '', '', '', 0, 0, now(), ?, ?, now());";
             pstm = conn.prepareStatement(sql);
             long start = System.currentTimeMillis();
             for (int i = 1; i <= 1000000; i++) {
@@ -143,8 +143,8 @@ public class TestJdbcUtil {
         PreparedStatement pstm = null;
         try {
             String sql = "INSERT INTO geek.order_info" +
-                    "(user_id, order_number, order_time, deliver_time, expect_distribution_time, receive_time, receive_name, receive_mobile, receive_address, order_status, deleted, add_time, add_user_id, update_user_id, update_time)" +
-                    "VALUES(?, ?, ?, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '', '', '', 0, 0, now(), ?, ?, now());";
+                    "(user_id, order_number, order_time, receive_name, receive_mobile, receive_address, order_status, deleted, add_time, add_user_id, update_user_id, update_time)" +
+                    "VALUES(?, ?, ?,'', '', '', 0, 0, now(), ?, ?, now())";
             pstm = conn.prepareStatement(sql);
             long start = System.currentTimeMillis();
             for (int i = 1; i <= 1000000; i++) {
@@ -171,8 +171,8 @@ public class TestJdbcUtil {
         PreparedStatement pstm = null;
         try {
             String sql = "INSERT INTO geek.order_info" +
-                    "(user_id, order_number, order_time, deliver_time, expect_distribution_time, receive_time, receive_name, receive_mobile, receive_address, order_status, deleted, add_time, add_user_id, update_user_id, update_time)" +
-                    "VALUES(?, ?, ?, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '', '', '', 0, 0, now(), ?, ?, now());";
+                    "(user_id, order_number, order_time, receive_name, receive_mobile, receive_address, order_status, deleted, add_time, add_user_id, update_user_id, update_time)" +
+                    "VALUES(?, ?, ?, '', '', '', 0, 0, now(), ?, ?, now());";
             pstm = conn.prepareStatement(sql);
             conn.setAutoCommit(false);
             long start = System.currentTimeMillis();
@@ -200,8 +200,8 @@ public class TestJdbcUtil {
         PreparedStatement pstm = null;
         try {
             String sql = "INSERT INTO geek.order_info" +
-                    "(user_id, order_number, order_time, deliver_time, expect_distribution_time, receive_time, receive_name, receive_mobile, receive_address, order_status, deleted, add_time, add_user_id, update_user_id, update_time)" +
-                    "VALUES(?, ?, ?, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '', '', '', 0, 0, now(), ?, ?, now());";
+                    "(user_id, order_number, order_time, receive_name, receive_mobile, receive_address, order_status, deleted, add_time, add_user_id, update_user_id, update_time)" +
+                    "VALUES(?, ?, ?,'', '', '', 0, 0, now(), ?, ?, now())";
             pstm = conn.prepareStatement(sql);
             conn.setAutoCommit(false);
             long start = System.currentTimeMillis();
@@ -224,6 +224,6 @@ public class TestJdbcUtil {
     }
 
     public static void main(String[] args) {
-        batchInsert();
+        normalInsert();
     }
 }

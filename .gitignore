@@ -38,3 +38,4 @@ hs_err_pid*
 /homework-database/.gitignore
 /homework-database/mvnw
 /homework-database/mvnw.cmd
+/homework-database/target/
