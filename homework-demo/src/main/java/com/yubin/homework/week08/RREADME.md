@@ -158,5 +158,7 @@ CREATE TABLE `t_order_info` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COMMENT='订单表';
 同时执行drop table也能成功
 4、使用jdbc工具类进行测试，代码见同目录下:TestJdbcUtil
+作业六：基于 hmily TCC 或 ShardingSphere 的 Atomikos XA 实现一个简单的分布式事务应用 demo（二选一），选择了基于Atomikos XA事务实现
+代码地址：https://github.com/yubin19900/homework/tree/main/homework-transaction
 
 
