@@ -11,20 +11,16 @@ server:
       enabled: true
       pattern: "%h %I %{YYYY-MM-dd HH:mm:ss.SSS}t [%m %H %U] %s %b %Dms [%{req_param_data}r] [%{AppClientInfo}r] [%{zp-user-id}i] [%{User-Agent}i]"
 spring:
-  http:
-    encoding:
-      force: true
-      charset: UTF-8
   shardingsphere:
     datasource:
-      names: demo0,demo1
-      demo0:
+      names: ds_0,ds_1
+      ds_0:
         type: com.zaxxer.hikari.HikariDataSource
         driverClassName: com.mysql.cj.jdbc.Driver
         jdbcUrl: jdbc:mysql://localhost:3316/demo_ds_0?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true
         username: root
         password:
-      demo1:
+      ds_1:
         type: com.zaxxer.hikari.HikariDataSource
         driverClassName: com.mysql.cj.jdbc.Driver
         jdbcUrl: jdbc:mysql://localhost:3326/demo_ds_1?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true

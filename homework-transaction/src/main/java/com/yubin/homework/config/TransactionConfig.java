@@ -21,12 +21,12 @@ import javax.sql.DataSource;
 public class TransactionConfig {
 
     @Bean
-    public PlatformTransactionManager txManager(@Qualifier("dataSource") DataSource dataSource) {
+    public PlatformTransactionManager txManager(DataSource dataSource) {
         return new DataSourceTransactionManager(dataSource);
     }
 
     @Bean
-    public JdbcTemplate jdbcTemplate(@Qualifier("dataSource") DataSource dataSource) {
+    public JdbcTemplate jdbcTemplate(DataSource dataSource) {
         return new JdbcTemplate(dataSource);
     }
 }
