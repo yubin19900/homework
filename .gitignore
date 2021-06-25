@@ -39,3 +39,6 @@ hs_err_pid*
 /homework-database/mvnw
 /homework-database/mvnw.cmd
 /homework-database/target/
+/homework-transaction/target/classes/application.yml
+/homework-transaction/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+/homework-transaction/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst

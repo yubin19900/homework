@@ -10,6 +10,7 @@
         <module name="homework-demo" />
         <module name="homework-web" />
         <module name="homework-test" />
+        <module name="homework-transaction" />
         <module name="homework-database" />
       </profile>
     </annotationProcessing>

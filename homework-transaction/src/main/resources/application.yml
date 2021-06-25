@@ -1,0 +1,62 @@
+server:
+  port: 8099
+  # tomcat设置
+  tomcat:
+    # 开启日志访问
+    max-threads: 1000
+    min-spare-threads: 500
+    uri-encoding: UTF-8
+    basedir: ./
+    accesslog:
+      enabled: true
+      pattern: "%h %I %{YYYY-MM-dd HH:mm:ss.SSS}t [%m %H %U] %s %b %Dms [%{req_param_data}r] [%{AppClientInfo}r] [%{zp-user-id}i] [%{User-Agent}i]"
+spring:
+  http:
+    encoding:
+      force: true
+      charset: UTF-8
+  shardingsphere:
+    datasource:
+      names: demo0,demo1
+      demo0:
+        type: com.zaxxer.hikari.HikariDataSource
+        driverClassName: com.mysql.cj.jdbc.Driver
+        jdbcUrl: jdbc:mysql://localhost:3316/demo_ds_0?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true
+        username: root
+        password:
+      demo1:
+        type: com.zaxxer.hikari.HikariDataSource
+        driverClassName: com.mysql.cj.jdbc.Driver
+        jdbcUrl: jdbc:mysql://localhost:3326/demo_ds_1?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true
+        username: root
+        password:
+    rules:
+      sharding:
+        tables:
+          t_order_info:
+            actualDataNodes: ds_${0..1}.t_order_info_${0..15}
+            tableStrategy:
+              standard:
+                shardingColumn: order_id
+                shardingAlgorithmName: t_order_info_inline
+        defaultDatabaseStrategy:
+          standard:
+            shardingColumn: user_id
+            shardingAlgorithmName: database_inline
+
+        sharding-algorithms:
+          database_inline:
+            type: INLINE
+            props:
+              algorithm-expression: ds_${user_id % 2}
+          t_order_info_inline:
+            type: INLINE
+            props:
+              algorithm-expression: t_order_info_${order_id % 16}
+    props:
+      sql-show: true
+management:
+  endpoints:
+    web:
+      exposure: ## 暴露健康检测接口
+        include: "health,info,dubbo-thread-pool"
