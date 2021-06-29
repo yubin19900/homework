@@ -13,14 +13,14 @@ server:
 spring:
   shardingsphere:
     datasource:
-      names: ds_0,ds_1
-      ds_0:
+      names: ds0,ds1
+      ds0:
         type: com.zaxxer.hikari.HikariDataSource
         driverClassName: com.mysql.cj.jdbc.Driver
         jdbcUrl: jdbc:mysql://localhost:3316/demo_ds_0?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true
         username: root
         password:
-      ds_1:
+      ds1:
         type: com.zaxxer.hikari.HikariDataSource
         driverClassName: com.mysql.cj.jdbc.Driver
         jdbcUrl: jdbc:mysql://localhost:3326/demo_ds_1?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true
@@ -30,7 +30,7 @@ spring:
       sharding:
         tables:
           t_order_info:
-            actualDataNodes: ds_${0..1}.t_order_info_${0..15}
+            actualDataNodes: ds${0..1}.t_order_info_${0..15}
             tableStrategy:
               standard:
                 shardingColumn: order_id
@@ -39,12 +39,11 @@ spring:
           standard:
             shardingColumn: user_id
             shardingAlgorithmName: database_inline
-
         sharding-algorithms:
           database_inline:
             type: INLINE
             props:
-              algorithm-expression: ds_${user_id % 2}
+              algorithm-expression: ds${user_id % 2}
           t_order_info_inline:
             type: INLINE
             props:

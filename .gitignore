@@ -42,3 +42,6 @@ hs_err_pid*
 /homework-transaction/target/classes/application.yml
 /homework-transaction/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
 /homework-transaction/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+/homework-transaction/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst
+/homework-transaction/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst
+/homework-transaction/target/maven-archiver/pom.properties
