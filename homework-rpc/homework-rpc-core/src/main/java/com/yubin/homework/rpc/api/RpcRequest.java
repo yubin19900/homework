@@ -1,7 +1,7 @@
 package com.yubin.homework.rpc.api;
 
-import lombok.Builder;
 import lombok.Data;
+import lombok.experimental.Accessors;
 
 /**
  * @program: homework
@@ -10,7 +10,7 @@ import lombok.Data;
  * @create: 2021-07-02 20:39
  **/
 @Data
-@Builder
+@Accessors(chain = true)
 public class RpcRequest {
 
     /**

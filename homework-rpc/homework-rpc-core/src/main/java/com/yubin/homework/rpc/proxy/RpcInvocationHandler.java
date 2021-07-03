@@ -42,7 +42,7 @@ public class RpcInvocationHandler implements InvocationHandler, MethodIntercepto
     }
 
     private Object process(Class<?> service, Method method, Object[] params, String url) {
-        RpcRequest rpcRequest = RpcRequest.builder().serviceClass(service.getName()).method(method.getName()).args(params).build();
+        RpcRequest rpcRequest = new RpcRequest().setServiceClass(service.getName()).setMethod(method.getName()).setArgs(params);
         RpcResponse rpcResponse = null;
         try {
             rpcResponse = NettyClientSync.getInstance().getResponse(rpcRequest, url);

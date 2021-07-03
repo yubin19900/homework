@@ -61,3 +61,12 @@ hs_err_pid*
 /homework-rpc-provider/target/classes/application.yml
 /homework-rpc/homework-rpc-core/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
 /homework-rpc/homework-rpc-provider/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+/homework-tcc/homework-trade/target/classes/spring/account-consumer.xml
+/homework-tcc/homework-account/target/classes/spring/account-provider.xml
+/homework-tcc/homework-account/target/classes/application.yml
+/homework-tcc/homework-trade/target/classes/application.yml
+/homework-rpc/homework-rpc-api/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+/homework-rpc/homework-rpc-consumer/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+/homework-tcc/homework-account/target/classes/db/db.sql
+/homework-tcc/homework-account/target/classes/hmily.yml
+/homework-tcc/homework-trade/target/classes/hmily.yml

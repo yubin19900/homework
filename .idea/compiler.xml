@@ -12,9 +12,12 @@
         <module name="homework-demo" />
         <module name="homework-test" />
         <module name="homework-transaction" />
+        <module name="homework-tcc-api" />
+        <module name="homework-account" />
         <module name="homework-rpc-consumer" />
         <module name="homework-web" />
         <module name="homework-rpc-provider" />
+        <module name="homework-trade" />
         <module name="homework-database" />
       </profile>
     </annotationProcessing>

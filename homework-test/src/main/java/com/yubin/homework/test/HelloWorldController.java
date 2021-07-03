@@ -1,4 +1,4 @@
-package com.yubin.homeworktest;
+package com.yubin.homework.test;
 
 import com.yubin.homework.web.bean.ISchool;
 import org.springframework.beans.factory.annotation.Autowired;

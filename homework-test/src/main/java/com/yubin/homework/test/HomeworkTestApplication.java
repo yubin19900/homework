@@ -1,4 +1,4 @@
-package com.yubin.homeworktest;
+package com.yubin.homework.test;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

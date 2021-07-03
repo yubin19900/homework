@@ -42,7 +42,7 @@ public class ServerHandler extends SimpleChannelInboundHandler<RpcProtocol> {
     }
 
     private RpcResponse invoke(RpcRequest rpcRequest) {
-        RpcResponse response = RpcResponse.builder().build();
+        RpcResponse response = new RpcResponse();
 
         String serviceClass = rpcRequest.getServiceClass();
         Object service = applicationContext.getBean(serviceClass);

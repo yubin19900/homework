@@ -51,7 +51,6 @@ public class NettyClientSync {
                 .option(ChannelOption.SO_REUSEADDR, true)
                 .option(ChannelOption.TCP_NODELAY, true)
                 .option(ChannelOption.AUTO_CLOSE, true)
-                .channel(NioSocketChannel.class)
                 .handler(new ClientInitializer());
         return bootstrap.connect(address, port).sync().channel();
     }
