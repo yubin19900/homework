@@ -71,3 +71,13 @@ hs_err_pid*
 /homework-tcc/homework-account/target/classes/hmily.yml
 /homework-tcc/homework-trade/target/classes/hmily.yml
 /homework-redis/homework-redis-lock/target/classes/application.yml
+/homework-redis/homework-redis-lock/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+/homework-redis/homework-redis-pubsub/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+/homework-tcc/homework-account/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+/homework-tcc/homework-tcc-api/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+/homework-tcc/homework-trade/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+/homework-redis/homework-redis-lock/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+/homework-redis/homework-redis-pubsub/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+/homework-tcc/homework-account/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+/homework-tcc/homework-tcc-api/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+/homework-tcc/homework-trade/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
