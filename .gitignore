@@ -70,3 +70,4 @@ hs_err_pid*
 /homework-tcc/homework-account/target/classes/db/db.sql
 /homework-tcc/homework-account/target/classes/hmily.yml
 /homework-tcc/homework-trade/target/classes/hmily.yml
+/homework-redis/homework-redis-lock/target/classes/application.yml
