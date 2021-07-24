@@ -17,6 +17,7 @@
         <module>homework-rpc</module>
         <module>homework-tcc</module>
         <module>homework-redis</module>
+        <module>homework-activemq</module>
     </modules>
     <dependencyManagement>
         <dependencies>
@@ -138,6 +139,11 @@
                 <groupId>redis.clients</groupId>
                 <artifactId>jedis</artifactId>
                 <version>2.10.2</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.activemq</groupId>
+                <artifactId>activemq-all</artifactId>
+                <version>5.16.2</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

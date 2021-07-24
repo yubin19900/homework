@@ -21,6 +21,7 @@
         <module name="homework-redis-pubsub" />
         <module name="homework-rpc-provider" />
         <module name="homework-trade" />
+        <module name="homework-activemq" />
       </profile>
     </annotationProcessing>
   </component>
