@@ -4,6 +4,8 @@
     <file url="file://$PROJECT_DIR$/homework-activemq/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/homework-database/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/homework-demo/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/homework-kafka/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/homework-mymq/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/homework-redis/homework-redis-lock/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/homework-redis/homework-redis-pubsub/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/homework-rpc/homework-rpc-provider/src/main/resources" charset="UTF-8" />

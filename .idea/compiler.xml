@@ -19,6 +19,8 @@
         <module name="homework-transaction" />
         <module name="homework-tcc-api" />
         <module name="homework-redis-pubsub" />
+        <module name="homework-kafka" />
+        <module name="homework-mymq" />
         <module name="homework-rpc-provider" />
         <module name="homework-trade" />
         <module name="homework-activemq" />

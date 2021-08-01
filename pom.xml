@@ -18,6 +18,8 @@
         <module>homework-tcc</module>
         <module>homework-redis</module>
         <module>homework-activemq</module>
+        <module>homework-kafka</module>
+        <module>homework-mymq</module>
     </modules>
     <dependencyManagement>
         <dependencies>

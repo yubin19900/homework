@@ -81,3 +81,5 @@ hs_err_pid*
 /homework-tcc/homework-account/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
 /homework-tcc/homework-tcc-api/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
 /homework-tcc/homework-trade/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+/.idea/
+/homework/.idea/
