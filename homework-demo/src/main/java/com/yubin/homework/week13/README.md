@@ -12,5 +12,6 @@ bin/kafka-consumer-perf-test.sh --bootstrap-server localhost:9002 --topic test32
 2021-08-01 22:22:45:710, 2021-08-01 22:24:25:833, 95.367, 125.5154, 100000, 139414.8368, 0.0000, 0, 100123, 0.0000, 0.0000
 2)实现 spring kafka 下对 kafka 集群的操作，将代码提交到 github
 代码地址:https://github.com/yubin19900/homework/tree/main/homework-kafka
-2、第六题
+2、第六题思考和设计自定义 MQ 第二个版本或第三个版本，写代码实现其中至少一个功能点，把设计思路和实现代码，提交到 GitHub
+工作比较忙，所以写了一个简陋的mq
 代码地址：https://github.com/yubin19900/homework/tree/main/homework-mymq
